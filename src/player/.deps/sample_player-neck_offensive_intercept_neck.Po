@@ -248,12 +248,12 @@ sample_player-neck_offensive_intercept_neck.o: \
  ../../src/player/planner/action_chain_graph.h \
  ../../src/player/planner/action_generator.h \
  ../../src/player/planner/field_evaluator.h \
- ../../src/player/planner/cooperative_action.h \
+ ../../src/player/planner/action_state_pair.h \
  ../../src/player/planner/predict_state.h \
  ../../src/player/planner/predict_player_object.h \
  ../../src/player/planner/predict_ball_object.h \
  /usr/local/include/rcsc/player/player_predicate.h \
- ../../src/player/planner/action_state_pair.h
+ ../../src/player/planner/cooperative_action.h
 /usr/include/stdc-predef.h:
 ../../config.h:
 neck_offensive_intercept_neck.h:
@@ -593,9 +593,9 @@ neck_default_intercept_neck.h:
 ../../src/player/planner/action_chain_graph.h:
 ../../src/player/planner/action_generator.h:
 ../../src/player/planner/field_evaluator.h:
-../../src/player/planner/cooperative_action.h:
+../../src/player/planner/action_state_pair.h:
 ../../src/player/planner/predict_state.h:
 ../../src/player/planner/predict_player_object.h:
 ../../src/player/planner/predict_ball_object.h:
 /usr/local/include/rcsc/player/player_predicate.h:
-../../src/player/planner/action_state_pair.h:
+../../src/player/planner/cooperative_action.h:

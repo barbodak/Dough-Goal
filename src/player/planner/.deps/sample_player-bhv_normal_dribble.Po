@@ -187,7 +187,8 @@ planner/sample_player-bhv_normal_dribble.o: \
  /usr/local/include/rcsc/player/soccer_action.h \
  planner/action_chain_holder.h planner/action_chain_graph.h \
  planner/action_generator.h planner/field_evaluator.h \
- planner/predict_state.h planner/predict_player_object.h \
+ planner/action_state_pair.h planner/predict_state.h \
+ planner/predict_player_object.h \
  /usr/local/include/rcsc/player/abstract_player_object.h \
  /usr/local/include/rcsc/player/localization.h \
  /usr/local/include/rcsc/player/visual_sensor.h /usr/include/c++/13/list \
@@ -221,8 +222,7 @@ planner/sample_player-bhv_normal_dribble.o: \
  /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
  /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
  /usr/local/include/rcsc/game_mode.h \
- /usr/local/include/rcsc/player/player_predicate.h \
- planner/action_state_pair.h planner/dribble.h \
+ /usr/local/include/rcsc/player/player_predicate.h planner/dribble.h \
  /usr/include/boost/shared_ptr.hpp \
  /usr/include/boost/smart_ptr/shared_ptr.hpp \
  /usr/include/boost/smart_ptr/detail/shared_count.hpp \
@@ -572,6 +572,7 @@ planner/action_chain_holder.h:
 planner/action_chain_graph.h:
 planner/action_generator.h:
 planner/field_evaluator.h:
+planner/action_state_pair.h:
 planner/predict_state.h:
 planner/predict_player_object.h:
 /usr/local/include/rcsc/player/abstract_player_object.h:
@@ -621,7 +622,6 @@ planner/predict_ball_object.h:
 /usr/include/c++/13/bits/parse_numbers.h:
 /usr/local/include/rcsc/game_mode.h:
 /usr/local/include/rcsc/player/player_predicate.h:
-planner/action_state_pair.h:
 planner/dribble.h:
 /usr/include/boost/shared_ptr.hpp:
 /usr/include/boost/smart_ptr/shared_ptr.hpp:

@@ -3,6 +3,12 @@
 /*
  *Copyright:
 
+ Cyrus2D
+ Modified by Omid Amini, Nader Zare
+
+ Gliders2d
+ Modified by Mikhail Prokopenko, Peter Wang
+
  Copyright (C) Hiroki SHIMORA
 
  This code is free software; you can redistribute it and/or modify
@@ -27,31 +33,29 @@
 #ifndef SAMPLE_FIELD_EVALUATOR_H
 #define SAMPLE_FIELD_EVALUATOR_H
 
-#include "field_evaluator.h"
-#include "predict_state.h"
+#include "planner/field_analyzer.h"
+#include "planner/field_evaluator.h"
+#include "planner/predict_state.h"
 
 #include <vector>
 
 namespace rcsc {
 class AbstractPlayerObject;
 class Vector2D;
-}
+} // namespace rcsc
 
 class ActionStatePair;
 
-class SampleFieldEvaluator
-    : public FieldEvaluator {
-private:
-
-public:
+class SampleFieldEvaluator : public FieldEvaluator {
+  private:
+  public:
     SampleFieldEvaluator();
 
-    virtual
-    ~SampleFieldEvaluator();
+    virtual ~SampleFieldEvaluator();
 
-    virtual
-    double operator()( const PredictState & state,
-                       const std::vector< ActionStatePair > & path ) const;
+    virtual double operator()(const PredictState &state,
+                              const std::vector<ActionStatePair> &path,
+                              const rcsc::WorldModel &wm) const;
 };
 
 #endif

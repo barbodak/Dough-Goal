@@ -821,3 +821,15 @@ uninstall-am:
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
+
+# Include the offensive_data_extractor.cpp object file in the build process
+src_player_objects = src/player/planner/sample_player-action_chain_graph.o \
+                     src/player/planner/sample_player-action_chain_holder.o \
+                     src/player/planner/sample_player-bhv_planned_action.o \
+                     src/player/planner/sample_player-bhv_normal_dribble.o \
+                     src/player/planner/sample_player-bhv_pass_kick_find_receiver.o \
+                     src/player/planner/neck_turn_to_receiver.o \
+                     src/player/data_extractor/offensive_data_extractor.o \
+
+sample_player_LDADD = $(src_player_objects) $(LIBS)
+

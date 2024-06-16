@@ -102,6 +102,8 @@ add_executable(sample_player
   sample_field_evaluator.cpp
   sample_freeform_message_parser.cpp
   sample_player.cpp
+  data_extractor/DEState.cpp
+  data_extractor/offensive_data_extractor.cpp
   strategy.cpp
   main_player.cpp
   )

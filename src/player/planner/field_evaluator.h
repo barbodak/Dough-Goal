@@ -3,6 +3,12 @@
 /*
  *Copyright:
 
+ Cyrus2D
+ Modified by Omid Amini, Nader Zare
+
+ Gliders2d
+ Modified by Mikhail Prokopenko, Peter Wang
+
  Copyright (C) Hiroki SHIMORA
 
  This code is free software; you can redistribute it and/or modify
@@ -27,9 +33,9 @@
 
 /////////////////////////////////////////////////////////////////////
 
+#include "action_state_pair.h"
 #include "cooperative_action.h"
 #include "predict_state.h"
-#include "action_state_pair.h"
 
 #include <rcsc/player/world_model.h>
 
@@ -41,33 +47,30 @@
   \brief abstract field evaluator function object class
 */
 class FieldEvaluator {
-public:
+  public:
+    typedef std::shared_ptr<FieldEvaluator> Ptr; //!< pointer type alias
+    typedef std::shared_ptr<const FieldEvaluator>
+        ConstPtr; //!< const pointer type alias
 
-    typedef std::shared_ptr< FieldEvaluator > Ptr; //!< pointer type alias
-    typedef std::shared_ptr< const FieldEvaluator > ConstPtr; //!< const pointer type alias
-
-protected:
+  protected:
     /*!
       \brief protected constructor to inhibit instantiation of this class
      */
-    FieldEvaluator()
-      { }
+    FieldEvaluator() {}
 
-public:
+  public:
     /*!
       \brief virtual destructor
      */
-    virtual
-    ~FieldEvaluator()
-      { }
+    virtual ~FieldEvaluator() {}
 
     /*!
       \brief evaluation function
       \return evaluation value of world model
      */
-    virtual
-    double operator() ( const PredictState & state,
-                        const std::vector< ActionStatePair > & path ) const = 0;
+    virtual double operator()(const PredictState &state,
+                              const std::vector<ActionStatePair> &path,
+                              const rcsc::WorldModel &wm) const = 0;
 };
 
 #endif
